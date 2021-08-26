@@ -1,20 +1,43 @@
 const express = require('express');
-const mysql = require('mysql');
+const mysql = require('mysql2/promise');
+const faker = require('faker');
 
 const app = express();
 
-const connection = mysql.createConnection({
-  host: 'desafio2_database',
-  user: 'root',
-  password: 'root',
-  database: 'desafio2'
-});
+async function connection() {
+  return await mysql.createConnection({
+    host: 'desafio2_database',
+    user: 'root',
+    password: 'root',
+    database: 'desafio2'
+  });
+};
 
-app.get('/', (_, response) => {
-  connection.query("INSERT INTO people (name) values ('Vlamir Santo')")
-  connection.end();
+async function create(database) {
+  const query = 'INSERT INTO people(name) VALUES (?);';
+  const values = [faker.name.findName()];
 
-  response.send('<h1>Full Cycle Rocks!</h1> - Lista de nomes cadastrada no banco de dados.');
+  return await database.query(query, values);
+}
+
+async function getAllNames(database) {
+  return await database.query("SELECT name FROM people");
+}
+
+app.get('/', async (_, response) => {
+  const database = await connection();
+  const result = await create(database);
+
+  if (!result) {
+    response.send('Error');
+  };
+
+  const [names] = await getAllNames(database);
+
+  let message = '<h1>Full Cycle Rocks!</h1>';
+  message += names.map(({ name }) => `${name}<br />`).join('');
+
+  response.send(message);
 });
 
 app.listen(3000, () => {

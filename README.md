@@ -23,9 +23,19 @@ Suba tudo em um repositório e faça a entrega.
 Rodar o comando no terminal:
 
 ```sh
-docker-compose up -d
+$ docker-compose up -d
 ```
 
 - Será criado um container chamado `desafio2_database` com a porta 3306 exposta, utilizando a imagem mysql:5.7, um banco de dados chamado `desafio2` com uma tabela chamada `people`;
 - Será criado um container chamado `desafio2_web` com a porta 8080 exposta, utilizando como base a imagem nginx:alpine;
 - Será criado um container chamado `desafio2_app` utilizando como base a imagem node:alpine, com a aplicação desenvolvida em Node.js;
+
+Basta acesar a url [http://localhost:8080](http://localhost:8080) no seu navegador.
+
+## Tecnologias utilizadas
+
+<img width="50" height="50" style="margin-right:10px" title="Docker" alt="Docker" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original-wordmark.svg" />
+<img width="50" height="50" style="margin-right:10px" title="Nginx" alt="Nginx" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" />
+<img width="50" height="50" style="margin-right:10px" title="NodeJS" alt="NodeJS" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg" />
+<img width="50" height="50" title="Mysql" alt="Mysql" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg
+" />
