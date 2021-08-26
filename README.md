@@ -34,8 +34,9 @@ Basta acesar a url [http://localhost:8080](http://localhost:8080) no seu navegad
 
 ## Tecnologias utilizadas
 
-<img width="50" height="50" style="margin-right:10px" title="Docker" alt="Docker" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original-wordmark.svg" />
-<img width="50" height="50" style="margin-right:10px" title="Nginx" alt="Nginx" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" />
-<img width="50" height="50" style="margin-right:10px" title="NodeJS" alt="NodeJS" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg" />
-<img width="50" height="50" title="Mysql" alt="Mysql" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg
-" />
+<p float="left">
+  <img width="50" height="50" style="margin-right:10px" title="Docker" alt="Docker" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original-wordmark.svg" />
+  <img width="50" height="50" style="margin-right:10px" title="Nginx" alt="Nginx" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" />
+  <img width="50" height="50" style="margin-right:10px" title="NodeJS" alt="NodeJS" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg" />
+  <img width="50" height="50" title="Mysql" alt="Mysql" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" />
+</p>
